@@ -1,0 +1,143 @@
+{% extends 'basetemplate.html' %}
+{% load static %}
+
+{% block content %}
+<div class="section1">
+<div class="heading_text">
+    <div class="main_heading">
+        <p>Redefining elegance with luxurious stones,<br>
+            showcasing <b class="color_change">24 years of excellence.</b> </p>
+    </div>
+    <div class="sub_heading">
+        <p>Where luxurious stones redefine Elegance and transform spaces into masterpieces.</p>
+    </div>
+</div>
+
+<div class="explore_link">
+    <img class="explore_img" src="{% static 'Media/livingroom.png' %}" alt="">
+</div>
+</div>
+
+<div class="why">
+    <div class="heading_text"> <div class="main_heading">
+        <p>Why are we the best partner for you?</p>
+    </div></div>
+   
+    <div class="why_list_of_items">
+        <ul class="why_list">
+            <li>Customer Comes First</li>
+            <li>No Hidden Price</li>
+            <li>Prime Stone Collection</li>
+            <li>Expert Guidance</li>
+            <li>Trusted Sources</li>
+            <li>Superior Quality + Budget Friendly</li>
+        </ul>
+    </div>
+</div>
+<div class="heading_text">
+    <div class="main_heading">
+        <p>Tailoring each project to perfection<br>
+            Elevate Your Space with <i class="color_change">Elegance.</i> </p>
+    </div>
+</div>
+<center>
+    <div class="products">
+
+        {% for item in query_results %}
+        <div class="product-card">
+            <div class="product-image">
+                <img class="item-image" src="{{item.image.url}}">
+            </div>
+            <div class="product-info">
+                <h5>{{item.tileName}}</h5>
+
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <a class="read_more" href="{%url 'Products_list' %}">Read More</a>
+    <br>
+    <br>
+</center>
+
+<div class="testimonial">
+    <img class="bg-image" src="{% static 'Media/browntile.png' %}" alt="">
+    <div class="content">
+        <div class="main_heading">
+            <p>Client <i>Testimonials</i></p>
+        </div>
+        <div class="sub_heading">
+            <p>The reason why we chose INDOLOTUS to design our family residence in Sydney is because they showed us how
+                dedicated they are,
+                not just to the design aspects of their projects, but also the customer experience from beginning to
+                end.</p>
+        </div>
+    </div>
+
+</div>
+<br>
+<br><br>
+<div class="projects">
+<div class="heading_text">
+    <div class="main_heading">
+        <p>Our Latest <b class="color_change">Projects</b> </p>
+    </div>
+</div>
+
+<div class="projects_home">
+    <div class="projects-brief">
+        {% for item in query2 %}
+        <div class="project-card">
+            <div class="project-image">
+                <img class="item-image-project" src="{{item.image.url}}">
+
+            </div>
+            <div class="project-info">
+                <h5>{{item.projectName}}</h5>
+                <p>{{item.description}}</p>
+
+            </div>
+
+        </div>
+    </div>
+    {% endfor %}
+
+</div>
+<center><a class="read_more" href="{%url 'Products_list' %}">Read More</a></center>
+
+</div>
+
+<br>
+<br>
+<br><br>
+<div class="benefits">
+    <div class="benefits_section">
+        <p class="heading">Additional Benefits</p>
+
+    </div>
+    <div class="list_section">
+        <ul class="ul_benefits">
+            <li>
+                <p>Explore 150,000+ m² of premium stones online</p>
+            </li>
+            <li>
+            <hr style="width:70px; transform:rotate(120deg); background-color:#EEDDCC;">
+        </li>
+
+
+            <li>
+                <p>From natural to artificial <br>Secure payments via bank transfer or card at our offices or warehouses
+                </p>
+            </li>
+            <li>
+            <hr style="width:70px; transform:rotate(120deg);"></li>
+            <li>
+                <p>we cater to every budget</p>
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+
+{% endblock %}

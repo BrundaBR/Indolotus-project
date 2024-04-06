@@ -1,0 +1,35 @@
+{% extends 'basetemplate.html' %}
+{% load static %}
+
+{% block content %}
+<center>
+    <br>
+    <br>
+    <div class="products">
+    
+        {% for item in tileproducts %}
+        <div class="product-card">
+            <div class="product-image">
+              <img class="item-image" src="{{item.image.url}}">
+            </div>
+            <div class="product-info">
+              <h5>{{item.tileName}}</h5>
+              <div class="minor_section">
+                <a href="{% url 'products-detail' item.id%}">Read More</a>
+            </div>
+            </div>
+          </div>
+         
+    
+    
+    {% endfor %}
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    </center>
+
+
+{% endblock content %}
+

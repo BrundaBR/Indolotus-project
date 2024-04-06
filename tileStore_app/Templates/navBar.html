@@ -1,0 +1,34 @@
+{% load static %}
+
+
+
+<nav class="navbar" id="navBar">
+
+    
+
+
+      <div class="navbar-brand">
+        
+        <img class="brandlogo" src="{% static 'Media/logo.png'%}" alt="INDOLOTUS" /> 
+      </div>
+      <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <div class="links_section">
+      <ul>
+   
+       <li><a  href="/">HOME</a></li> 
+       <li><a  href="/app/view">STONE CATALOG</a></li> 
+       <li><a  href="{%url 'About' %}">ABOUT US</a></li> 
+       <li><a  href="/">CONTACT US</a></li>
+      
+      <li><button class="links_button" ><a  href="/">SEND REQUEST</a></button> </li>
+        
+       
+    </ul>
+
+    </div>
+
+  </nav>

@@ -1,0 +1,21 @@
+{% extends 'basetemplate.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="">
+ <img src="{{item.image.url}}" alt="">
+<div class="">{{item.tileName}}</div>
+
+</div>
+<div class="">{{item.description}}</div>
+<div class="">
+    <div class="">
+        <a href="{% url 'products-list'%}">Go Back</a>
+    </div>
+    <div class="">
+
+    </div>
+</div>
+
+{% endblock content %}

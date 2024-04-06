@@ -1,0 +1,66 @@
+{% load static %}
+
+<style>
+    footer {
+        position: relative;
+        left: 0;
+        bottom: 0;
+        min-width: 100vh;
+        height: 300px;
+        background-color: #1C1C1C;
+        color: white;
+        
+        font: Raleway;
+    }
+    .contents{
+        display: flex;
+        padding: 30px;
+        justify-content: space-around;
+    }
+    .footer-brand .logo{
+        width: 70%;
+       
+    }
+    .list_foot{
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+    }
+    .links_section_footer ul{
+        list-style: none;
+    }
+    .links_section_footer ul li a{
+        padding: 20px;
+        text-decoration: none;
+        color: #F9F1F0;
+    }
+    a{
+        color: #F9F1F0;
+    }
+    </style>
+<footer>
+    <div class="contents">
+    <div class="footer-brand">
+        
+        <img class="logo" src="{% static 'Media/logo.png'%}" alt="INDOLOTUS" /> 
+      </div>
+
+      <div class="list_foot">    
+         <div class="links_section_footer">
+        <ul>
+         <li><a  href="/">HOME</a></li> 
+         <li><a  href="/app/view">STONE CATALOG</a></li> 
+         <li><a  href="/">ABOUT US</a></li> 
+         <li><a  href="/">CONTACT US</a></li>
+
+      </ul>
+  
+      </div>
+    </div>
+    <p><br><br>
+        <a href="#">Socials</a><br>
+        <a href="#">Instagram</a><br>
+    </p>
+    
+</div>
+    </footer>

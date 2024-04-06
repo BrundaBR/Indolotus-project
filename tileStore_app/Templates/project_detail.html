@@ -1,0 +1,21 @@
+{% extends 'basetemplate.html' %}
+{% load static %}
+
+{% block content %}
+<center>
+<div class="projects">
+    <div class="project_content">
+ <img class="image_detail_project" src="{{item.image.url}}" alt="">
+<h5>{{item.projectName}}</h5>
+
+
+<div class="description">{{item.description}}</div>
+
+    <div class="">
+        <a href="{% url 'project-list'%}">Go Back</a>
+    
+</div>
+</div>
+</div>
+</center>
+{% endblock content %}
