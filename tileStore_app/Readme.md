@@ -4,6 +4,8 @@ black- #1C1C1C
 white - #F9F1F0
 cream= #EEDDCC
 gold: #CCAB00
+light brown :#F5E2DC
+
 
 
 ## Fonts

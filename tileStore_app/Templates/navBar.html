@@ -5,9 +5,10 @@
 <nav class="navbar" id="navBar">
 
     
-
+ 
 
       <div class="navbar-brand">
+      
         
         <img class="brandlogo" src="{% static 'Media/logo.png'%}" alt="INDOLOTUS" /> 
       </div>
@@ -16,15 +17,16 @@
         <span class="bar"></span>
         <span class="bar"></span>
       </a>
+      
       <div class="links_section">
-      <ul>
+      <ul class="links_section_ul">
    
        <li><a  href="/">HOME</a></li> 
        <li><a  href="/app/view">STONE CATALOG</a></li> 
        <li><a  href="{%url 'About' %}">ABOUT US</a></li> 
-       <li><a  href="/">CONTACT US</a></li>
+       <li><a  href="{%url 'Contact' %}">CONTACT US</a></li>
       
-      <li><button class="links_button" ><a  href="/">SEND REQUEST</a></button> </li>
+      <li><button class="links_button" ><a  href="{%url 'Contact' %}">SEND REQUEST</a></button> </li>
         
        
     </ul>

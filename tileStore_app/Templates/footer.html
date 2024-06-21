@@ -1,5 +1,4 @@
 {% load static %}
-
 <style>
     footer {
         position: relative;
@@ -9,7 +8,6 @@
         height: 300px;
         background-color: #1C1C1C;
         color: white;
-        
         font: Raleway;
     }
     .contents{
@@ -19,7 +17,6 @@
     }
     .footer-brand .logo{
         width: 70%;
-       
     }
     .list_foot{
         padding: 50px;
@@ -34,9 +31,36 @@
         text-decoration: none;
         color: #F9F1F0;
     }
-    a{
+    a {
         color: #F9F1F0;
     }
+    @media (max-width:500px){
+        footer{
+            width: 100vw;
+            display: flex;
+        }
+        .contents{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 0;
+        }
+        .logo{
+          display: none;
+        }
+        .list_foot{
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    .links_section_footer ul li a{
+        padding: 0px;
+        text-decoration: none;
+        color: #F9F1F0;
+    }
+    }
+
+
     </style>
 <footer>
     <div class="contents">
@@ -49,9 +73,9 @@
          <div class="links_section_footer">
         <ul>
          <li><a  href="/">HOME</a></li> 
-         <li><a  href="/app/view">STONE CATALOG</a></li> 
-         <li><a  href="/">ABOUT US</a></li> 
-         <li><a  href="/">CONTACT US</a></li>
+         <li><a  href="{%url 'Contact' %}">STONE CATALOG</a></li> 
+         <li><a  href="{%url 'About' %}">ABOUT US</a></li> 
+         <li><a  href="{%url 'Contact' %}">CONTACT US</a></li>
 
       </ul>
   

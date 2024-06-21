@@ -1,4 +1,94 @@
 {% extends 'basetemplate.html' %}
-
+{%load static %}
 {% block content %}
+<div class="contact_section">
+    <div class="heading_text">
+        <div class="main_heading">
+            <p>Contact <i class="color_change">Us</i> </p>
+        </div>
+    </div>
+    <div class="main_container">
+        <div class="grid-container-element">
+            <div class="grid-child-element ">
+                <img class="filler_image" src="{%static 'Media/filler.png'%}" alt="">
+            </div>
+            <div class="grid-child-element green">
+                <div class="form_section">
+            
+                    <form method="POST" class="form_mini">
+                        {% csrf_token %}
+                        <ul class="contactList">
+                            <li id="Name" class="Name">Name {{ form.contact_name }}</li>
+                            <li id="email" class="Email"> Email {{ form.contact_email }}</li>
+                            <li id="message" class="Feedback">Feedback {{ form.content }}</li>
+                            <button class="submit_button" type="submit">Send Query</button>
+                        </ul>
+                        
+                    </form>
+                   
+                </div>
+
+            </div>
+        </div>
+        <div class="grid-container-element">
+            <div class="grid-child-element ">
+                <ul class="info_section">
+                    <li>
+                        <div class="grid-container-element">
+                            <div class="grid-child-element ">
+                                <br><i class="fa-regular fa-envelope" style="color: #FF785A;"></i> EMAIL US <br>Our Team will be <br>in touch to help you
+                            </div>
+                            <div class="grid-child-element ">
+                                <p class="semi-heading"> info@indolotus.com</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="grid-container-element">
+                            <div class="grid-child-element "><br><i class="fa-regular fa-phone-volume" style="color: #FF785A;"></i> Call us <br>Mon-Sun  from 10am to 7pm</div>
+                            <div class="grid-child-element ">
+                                <p class="semi-heading"> 919897659433</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="grid-container-element">
+                            <div class="grid-child-element "><br><i class="fa-regular fa-address-book" style="color: #FF785A;"></i> Locate us <br>India</div>
+                           
+                            <div class="grid-child-element "> <p class="semi-heading"><br> A-152, Sector 63 Rd, A Block, Sector 65, Noida,
+                                Uttar Pradesh 201301</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="grid-child-element ">
+                <div class="mapouter">
+                    <div class="gmap_canvas"><iframe width="100%" height="560" id="gmap_canvas"
+                            src="https://maps.google.com/maps?q=+A-152%2C+Sector+63+Rd%2C+A+Block%2C+Sector+65%2C+Noida%2C+Uttar+Pradesh+201301&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
+                            href="https://www.analarmclock.com"></a><br><a href="https://www.onclock.net"></a><br>
+                        <style>
+                            .mapouter {
+                                /* position: relative;
+                                text-align: right; */
+                                height: 560px;
+                                width: 100%;
+                            }
+                        </style><a href="https://www.ongooglemaps.com">adding google map to website</a>
+                        <style>
+                            .gmap_canvas {
+                                overflow: hidden;
+                                background: none !important;
+                                height: 560px;
+                                width: 100%;
+                            }
+                        </style>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 {% endblock %}
