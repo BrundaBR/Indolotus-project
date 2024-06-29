@@ -10,81 +10,152 @@
         color: white;
         font: Raleway;
     }
-    .contents{
+
+    .contents {
         display: flex;
         padding: 30px;
         justify-content: space-around;
     }
-    .footer-brand .logo{
+
+    .footer-brand .logo {
         width: 70%;
     }
-    .list_foot{
+
+    .list_foot {
         padding: 50px;
         display: flex;
         flex-direction: column;
     }
-    .links_section_footer ul{
+
+    .links_section_footer ul {
         list-style: none;
     }
-    .links_section_footer ul li a{
+
+    .links_section_footer ul li a {
         padding: 20px;
         text-decoration: none;
         color: #F9F1F0;
     }
+
     a {
         color: #F9F1F0;
     }
-    @media (max-width:500px){
-        footer{
-            width: 100vw;
+
+    .mobile_footer .mobile_list {
+        display: none;
+    }
+
+    @media (max-width:500px) {
+        footer {
+            position: sticky;
+            left: 0px;
+            bottom: 0px;
+            min-width: 100vw;
+            height: 200px;
+
+        }
+
+        .footer-brand {
+
+            display: none;
+
+        }
+
+        .socials {
+            display: none;
+        }
+
+        .contents {
+            display: none;
+        }
+
+        .footer-brand .logo {
+            display: none;
+        }
+        .mobile_footer .mobile_list {
             display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            text-decoration: none;
+          
         }
-        .contents{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        padding: 0;
+         .mobile_list ul li{
+            list-style: none;
         }
-        .logo{
-          display: none;
+
+        .mobile_footer {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
         }
-        .list_foot{
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-    }
-    .links_section_footer ul li a{
-        padding: 0px;
-        text-decoration: none;
-        color: #F9F1F0;
-    }
+
+        .mobile_list ul li a {
+            padding: 0px;
+            text-decoration: none;
+            color: #F9F1F0;
+            font-size: .5rem;
+        }
+        .Mobilelogo{
+            width: 1rem;
+            min-width: 3rem;
+            min-height: 3rem;
+
+        }
+        @media (max-width:300px) {
+            footer {
+            position: sticky;
+            left: 0px;
+            bottom: 0px;
+            min-width: 50vw;
+            height: 200px;
+        }
+        .mobile_footer {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+        }
+        }
+
     }
 
-
-    </style>
+</style>
 <footer>
     <div class="contents">
-    <div class="footer-brand">
-        
-        <img class="logo" src="{% static 'Media/logo.png'%}" alt="INDOLOTUS" /> 
-      </div>
+        <div class="footer-brand">
+            <img class="logo" src="{% static 'Media/logo.png'%}" alt="INDOLOTUS" />
+        </div>
 
-      <div class="list_foot">    
-         <div class="links_section_footer">
-        <ul>
-         <li><a  href="/">HOME</a></li> 
-         <li><a  href="{%url 'Contact' %}">STONE CATALOG</a></li> 
-         <li><a  href="{%url 'About' %}">ABOUT US</a></li> 
-         <li><a  href="{%url 'Contact' %}">CONTACT US</a></li>
+        <div class="list_foot">
+            <div class="links_section_footer">
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="{%url 'Contact' %}">STONE CATALOG</a></li>
+                    <li><a href="{%url 'About' %}">ABOUT US</a></li>
+                    <li><a href="{%url 'Contact' %}">CONTACT US</a></li>
 
-      </ul>
-  
-      </div>
+                    </p>
+                </ul>
+            </div>
+        </div>
+        <p class="socials"><br><br>
+            <a href="#">Socials</a><br>
+            <a href="#">Instagram</a><br>
+        </p>
     </div>
-    <p><br><br>
-        <a href="#">Socials</a><br>
-        <a href="#">Instagram</a><br>
-    </p>
-    
-</div>
-    </footer>
+    <div class="mobile_footer">
+        <div class="mobile_list">
+            <ul>
+               <li><img class="Mobilelogo" src="{% static 'Media/logo.png'%}" alt="INDOLOTUS" /></li> 
+
+                <li><a href="/">HOME</a></li>
+                <li><a href="{%url 'Contact' %}">STONE CATALOG</a></li>
+                <li><a href="{%url 'About' %}">ABOUT US</a></li>
+                <li><a href="{%url 'Contact' %}">CONTACT US</a></li>
+                <li> <a class="socials_for_mobile" href="#">Socials</a></li>
+                    <li><a class="socials_for_mobile" href="#">Instagram</a></li>
+                </p>
+            </ul>
+        </div>
+    </div>
+</footer>

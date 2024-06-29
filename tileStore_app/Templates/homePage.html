@@ -19,27 +19,15 @@
 </div>
 <div class="section2">
     <div class="why">
-        <div class="heading_text">
-            <div class="main_heading">
-                <p>Why are we the best partner for you?</p>
-            </div>
-        </div>
+        <img class="explore_img" src="{% static 'Media/bestpartner.png' %}" alt="">
 
-        <div class="why_list_of_items">
-            <ul class="why_list">
-                <li>Customer Comes First</li>
-                <li>No Hidden Price</li>
-                <li>Prime Stone Collection</li>
-                <li>Expert Guidance</li>
-                <li>Trusted Sources</li>
-                <li>Superior Quality + Budget Friendly</li>
-            </ul>
-        </div>
+
+   
     </div>
 </div>
 <div class="section3">
     <div class="heading_text">
-        <div class="main_heading">
+        <div class="main_heading_1">
             <p>Tailoring each project to perfection<br>
                 Elevate Your Space with <i class="color_change">Elegance.</i> </p>
         </div>
@@ -47,7 +35,9 @@
     <center>
         <div class="products">
 
-            {% for item in query_results %}
+            {% for item in query_results   %}
+            {% if forloop.counter <= 3 %}
+
             <div class="product-card">
                 <div class="product-image">
                     <img class="item-image" src="{{item.image.url}}">
@@ -56,30 +46,24 @@
                     <h5>{{item.tileName}}</h5>
 
                 </div>
+                <button class="read_more_btn"><a class="read_more" href="{% url 'products-detail' item.id%}">Read More</a></button> 
+<br><br><br>
             </div>
+            {% endif %}
             {% endfor %}
         </div>
-        <a class="read_more" href="{%url 'Products_list' %}">Read More</a>
+        <button class="read_more_btn"><a class="read_more" href="{%url 'Products_list' %}">View More</a></button> 
+
         <br>
+
         <br>
+
     </center>
 </div>
 
 <div class="section4">
     <div class="testimonial">
-        <img class="bg-image" src="{% static 'Media/browntile.png' %}" alt="">
-        <div class="content">
-            <div class="main_heading">
-                <p>Client <i>Testimonials</i></p>
-            </div>
-            <div class="sub_heading">
-                <p class="lengthy">The reason why we chose INDOLOTUS to design our family residence in Sydney is because they showed us
-                    how
-                    dedicated they are,
-                    not just to the design aspects of their projects, but also the customer experience from beginning to
-                    end.</p>
-            </div>
-        </div>
+        <img class="testimonial_img" src="{% static 'Media/testimonial.png' %}" alt="">
 
     </div>
     <br>
@@ -87,15 +71,19 @@
 </div>
 
 <div class="section5">
-    <div class="projects">
-        <div class="heading_text">
-            <div class="main_heading">
-                <p>Our Latest <b class="color_change">Projects</b> </p>
-            </div>
-        </div>
+    <div class="main_heading"> <p>Our Latest <b class="color_change">Projects</b> </p></div>
+    <img class="project2_img" src="{% static 'Media/project2.png' %}" alt="">
+
+    <img class="project1_img" src="{% static 'Media/project1.png' %}" alt="">
+
+    <!-- <div class="projects">
+        <img class="testimonial_img" src="{% static 'Media/project2.png' %}" alt="">
+
+        <img class="project1_img" src="{% static 'Media/project1.png' %}" alt="">
 
         <div class="projects_home">
-            <div class="projects-brief">
+
+          <div class="projects-brief">
                 {% for item in query2 %}
                 <div class="project-card">
                     <div class="project-image">
@@ -110,12 +98,13 @@
 
                 </div>
             </div>
-            {% endfor %}
+            {% endfor %} 
+
 
         </div>
         <center><a class="read_more" href="{%url 'Products_list' %}">Read More</a></center>
 
-    </div>
+    </div> -->
 </div>
 
 <br>
@@ -124,32 +113,7 @@
 <div class="section6">
     <div class="benefits">
         <div class="benefits_section">
-            <p class="heading">Additional Benefits</p>
-
-        </div>
-        <div class="list_section">
-            <ul class="ul_benefits">
-                <li>
-                    <p>Explore 150,000+ m² of premium stones online</p>
-                </li>
-                <li>
-                    <hr style="width:70px; transform:rotate(120deg); background-color:#EEDDCC;">
-                </li>
-
-
-                <li>
-                    <p>From natural to artificial <br>Secure payments via bank transfer or card at our offices or
-                        warehouses
-                    </p>
-                </li>
-                <li>
-                    <hr style="width:70px; transform:rotate(120deg);">
-                </li>
-                <li>
-                    <p>we cater to every budget</p>
-                </li>
-            </ul>
-        </div>
+            <img class="benefits_section-image" src="{% static 'Media/benefitsadditional.png' %}">
 
     </div>
 </div>

@@ -1,0 +1,50 @@
+{% extends 'basetemplate.html' %}
+{% load static %}
+{% block content %}
+
+
+
+<style>
+    .quote{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+        width: 100%;
+        padding: 20px;
+    }
+    .quote .formforquote{
+        font-size: 1rem;
+    }
+    
+    @media (max-width:500px) {
+        .quote{
+            padding-top:150px;
+ 
+        }
+.formforquote{
+    padding-top:50px;
+    width: 100%;
+    min-width: 30vw;
+    justify-content:center;
+    align-items: center;
+}
+.main_heading{
+    font-size: 1rem;
+}
+    }
+    
+</style>
+
+<div class="quote" >
+    <div class="main_heading">Get Quote</div>
+
+    <form class="formforquote" method="post" action="">
+        {% csrf_token %}
+        {{ form }}
+        <button  class="read_more_btn" type="submit">Send</button>
+    </form>
+</div>
+
+
+{% endblock %}

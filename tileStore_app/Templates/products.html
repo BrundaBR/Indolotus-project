@@ -3,9 +3,9 @@
 
 {% block content %}
 <center>
-    <br>
-    <br>
+ 
     <div class="products">
+      <img src="{% static 'Media/stone_cata.png'%}" alt="" class="stone_catalog">
     
         {% for item in tileproducts %}
         <div class="product-card">
@@ -15,19 +15,33 @@
             <div class="product-info">
               <h5>{{item.tileName}}</h5>
               <div class="minor_section">
-                <a href="{% url 'products-detail' item.id%}">Read More</a>
+             <button class="read_more_btn"><a href="{% url 'products-detail' item.id%}">Read More</a></button>  
+             <button class="read_more_btn"><a href="{% url 'quote' %}" >Get Quote</a></button> 
             </div>
             </div>
           </div>
-         
-    
-    
+
     {% endfor %}
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
+    <!-- <div class="popup-wrapper">
+
+      <div class="popup">
+
+          <div class="popup-close">X</div>
+
+          <div class="popup-content">
+
+              <h1>This is the popup</h1>
+
+              <p> We are going to add more info here soon</p>
+
+              <a href="#"> View Website</a>
+
+          </div>
+
+      </div>
+
+  </div> -->
     </center>
 
 

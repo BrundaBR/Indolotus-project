@@ -39,7 +39,7 @@ def contactPage(request):
             subject,
             content,
             user_email,
-            ["revadibrunda@gmail.com","pratikram.design@gmail.com"],
+            ["revadibrunda@gmail.com","pratikram.design@gmail.com","rebelupproduction@gmail.com"],
             fail_silently=False,
             connection=connection
         )
@@ -49,3 +49,8 @@ def contactPage(request):
 
     context = {'form': form}
     return render(request,template_name="contactPage.html",context=context)
+
+# def getquotepopup(request):
+#     form = FeedbackForm(request.POST)
+
+#     context = {'form': form}

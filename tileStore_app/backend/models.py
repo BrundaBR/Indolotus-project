@@ -1,8 +1,9 @@
 from django.db import models
 
-# Create your models here.
+
+
 class Tileproducts(models.Model):
-    id=models.AutoField(primary_key=True)
+    id=models.AutoField(primary_key=True, unique=True, blank=True, null=False, default=None)
     tileName=models.CharField(max_length=255)
     description=models.CharField(max_length=955)
     cost=models.FloatField()

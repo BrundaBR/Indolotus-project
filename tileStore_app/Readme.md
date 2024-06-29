@@ -21,3 +21,7 @@ Raleway
 
 2 db tables
 4. additional benefits and footer
+
+
+## admin panel
+admin,admin

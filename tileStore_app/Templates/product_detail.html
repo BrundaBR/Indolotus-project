@@ -1,6 +1,5 @@
 {% extends 'basetemplate.html' %}
 {% load static %}
-
 {% block content %}
 <!-- 
 <div class="">
@@ -19,20 +18,25 @@
 </div> -->
 
 <center>
+    <img src="{% static 'Media/stone_cata.png'%}" alt="" class="stone_catalog_dets">
+
     <div class="projects">
         <div class="project_content">
-     <img class="image_detail_product" src="{{item.image.url}}" alt="">
-    <h5>{{item.projectName}}</h5>
-    
-    
-    <div class="description">{{item.description}}</div>
-    
-        <div class="minor_section">
-            <a href="{% url 'products-list'%}">Go Back</a>
-        
+            <img class="image_detail_product" src="{{item.image.url}}" alt="">
+            <h3 class="moile_text_heading">{{item.tileName}}</h3>
+            <h5 class="moile_text_heading">{{item.typeoftile}}</h5>
+            <div class="description">
+                <p>{{item.description}}</p>
+            </div>
+            <div class="minor_section">
+                <button class="gobackbtn"><a href="{% url 'products-list'%}">Go Back</a></button>
+            </div>
+        </div>
     </div>
     </div>
-    </div>
-    </center>
+
+
+
+</center>
 
 {% endblock content %}
